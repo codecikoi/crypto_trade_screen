@@ -88,13 +88,59 @@ class _TradeScreenState extends State<TradeScreen> {
                         text: 'Amount (BTC)',
                         color: AppColors.grey,
                       ),
-                      const SizedBox(height: 34),
+                      const SizedBox(
+                        height: 50,
+                        child: Text('slider'),
+                      ),
                       CustomTextButton(
                         text: 'Total (USDT)',
-                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.grey,
                       ),
+                      const SizedBox(height: 17.0),
+                      Row(
+                        children: [
+                          Text(
+                            'Avbl',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.grey,
+                            ),
+                          ),
+                          const SizedBox(width: 60),
+                          Text(
+                            '1 000.00 usdt'.toUpperCase(),
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(width: 7),
+                          Container(
+                            height: 14,
+                            width: 14,
+                            child: Icon(
+                              Icons.add,
+                              size: 10,
+                              color: Colors.white,
+                            ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: AppColors.grey,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 17),
+                      CustomTextButton(
+                        text: 'Buy BTC',
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      )
                     ],
-                  )
+                  ),
                 ],
               ),
             ],
