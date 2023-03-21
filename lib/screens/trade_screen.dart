@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../resources/app_colors.dart';
 import '../widgets/coin_amount_info.dart';
 import '../widgets/custom_tab_bar.dart';
+import '../widgets/slider_amount.dart';
 
 class TradeScreen extends StatefulWidget {
   const TradeScreen({Key? key}) : super(key: key);
@@ -88,14 +89,12 @@ class _TradeScreenState extends State<TradeScreen> {
                         text: 'Amount (BTC)',
                         color: AppColors.grey,
                       ),
-                      const SizedBox(
-                        height: 50,
-                        child: Text('slider'),
-                      ),
+                      SliderAmount(),
                       CustomTextButton(
                         text: 'Total (USDT)',
                         fontWeight: FontWeight.w600,
                         color: AppColors.grey,
+                        buttonColor: AppColors.darkGrey,
                       ),
                       const SizedBox(height: 17.0),
                       Row(
@@ -138,6 +137,7 @@ class _TradeScreenState extends State<TradeScreen> {
                         text: 'Buy BTC',
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
+                        buttonColor: AppColors.green,
                       )
                     ],
                   ),

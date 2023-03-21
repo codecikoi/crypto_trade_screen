@@ -5,12 +5,13 @@ class CustomTextButton extends StatelessWidget {
   final String text;
   final Color color;
   final FontWeight fontWeight;
+  final Color buttonColor;
 
   const CustomTextButton({
     Key? key,
     required this.text,
     required this.color,
-    required this.fontWeight,
+    required this.fontWeight, required this.buttonColor,
   }) : super(key: key);
 
   @override
@@ -19,7 +20,7 @@ class CustomTextButton extends StatelessWidget {
       height: 42,
       width: 200,
       decoration: BoxDecoration(
-        color: AppColors.darkGrey,
+        color: buttonColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Center(
